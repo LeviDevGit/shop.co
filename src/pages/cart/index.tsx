@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
-export default function Page() {
+export default function Cart() {
   return (
     <div>
-      <h1>HOME PAGE</h1>
+      <h1>CART PAGE</h1>
       <ul>
         <li>
-          <Link href="/cart">Cart</Link>
+          <Link href="/">Home</Link>
         </li>
         <li>
           <Link href="/category/filtro1">Category</Link>
