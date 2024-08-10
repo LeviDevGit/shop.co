@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        'anti-flash-white': '#F0F0F0',
+      },
       fontFamily: {
         sans: ['var(--font-satoshi)'],
       },

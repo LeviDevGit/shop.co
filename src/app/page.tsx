@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Page() {
+export default function Home() {
   return (
     <div>
       <h1>HOME PAGE</h1>

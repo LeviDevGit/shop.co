@@ -1,8 +1,6 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
-export default function Page() {
-  const router = useRouter()
+export default function Filter({ params }: { params: { filter: string } }) {
   return (
     <div>
       <h1>CATEGORY PAGE</h1>
@@ -17,7 +15,7 @@ export default function Page() {
           <Link href="/detail/produto2">Detail Product</Link>
         </li>
       </ul>
-      <p>Post: {router.query.filter}</p>
+      <p>Post: {params.filter}</p>
     </div>
   )
 }

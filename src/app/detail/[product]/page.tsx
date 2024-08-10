@@ -1,8 +1,6 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
-export default function Page() {
-  const router = useRouter()
+export default function Product({ params }: { params: { product: string } }) {
   return (
     <div>
       <h1>PRODUCT DETAIL PAGE</h1>
@@ -17,7 +15,7 @@ export default function Page() {
           <Link href="/">Home</Link>
         </li>
       </ul>
-      <p>Post: {router.query.product}</p>
+      <p>Post: {params.product}</p>
     </div>
   )
 }

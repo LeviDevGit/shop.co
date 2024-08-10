@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .custom-gradient {
+      @apply bg-gradient-to-r from-white to-black;
+      background: linear-gradient(
+        to bottom, 
+        #ffffff 0%, 
+        #ffffff 50%, 
+        #F0F0F0 50%, 
+        #F0F0F0 100%
+      );
+    }
+  }
