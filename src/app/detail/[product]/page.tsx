@@ -1,3 +1,4 @@
+import { ProductCard } from '@/components/ProductCard'
 import Link from 'next/link'
 
 export default function Product({ params }: { params: { product: string } }) {
@@ -16,6 +17,7 @@ export default function Product({ params }: { params: { product: string } }) {
         </li>
       </ul>
       <p>Post: {params.product}</p>
+      <ProductCard />
     </div>
   )
 }

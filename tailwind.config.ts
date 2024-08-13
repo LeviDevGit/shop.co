@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundColor: {
         'anti-flash-white': '#F0F0F0',
+        isabelline: '#F0EEED',
       },
       fontFamily: {
         sans: ['var(--font-satoshi)'],

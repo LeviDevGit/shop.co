@@ -1,4 +1,15 @@
-import { Facebook, Github, Instagram, Mail, Twitter, X } from 'lucide-react'
+import {
+  CircleUserRound,
+  Facebook,
+  Github,
+  Instagram,
+  Mail,
+  Menu,
+  Search,
+  ShoppingCart,
+  Twitter,
+  X,
+} from 'lucide-react'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Image from 'next/image'
@@ -67,7 +78,27 @@ export default function RootLayout({
               </button>
             </div>
           </div>
-          <nav></nav>
+          <nav className="flex items-end justify-between p-3 pb-5">
+            <div className="flex items-end gap-3">
+              <button>
+                <Menu strokeWidth={2.5} />
+              </button>
+              <h2 className={`${integral.className} text-3xl font-bold`}>
+                SHOP.CO
+              </h2>
+            </div>
+            <div className="flex gap-3">
+              <button>
+                <Search strokeWidth={2.5} />
+              </button>
+              <button>
+                <ShoppingCart strokeWidth={2.5} />
+              </button>
+              <button>
+                <CircleUserRound strokeWidth={2.5} />
+              </button>
+            </div>
+          </nav>
         </header>
         <main>{children}</main>
         <footer>
