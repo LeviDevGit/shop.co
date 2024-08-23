@@ -25,7 +25,7 @@ function StarRating({ rating }: StarRatingProps) {
 export function ProductCard() {
   return (
     <div className="w-[175px]">
-      <div className="bg-isabelline rounded-2xl">
+      <div className="rounded-2xl bg-isabelline">
         <img
           src="https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-white-t-shirt-mockup-realistic-t-shirt-png-image_9906363.png"
           alt=""
