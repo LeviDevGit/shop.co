@@ -49,7 +49,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${satoshi.className} w-screen`}>
         <Header />
-        <main className="bg-anti-flash-white">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

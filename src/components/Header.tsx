@@ -1,5 +1,6 @@
 import { integral } from '@/app/layout'
 import { CircleUserRound, Menu, Search, ShoppingCart, X } from 'lucide-react'
+import Link from 'next/link'
 
 export function Header() {
   return (
@@ -23,11 +24,13 @@ export function Header() {
             <button className="lg:hidden">
               <Menu strokeWidth={2.5} />
             </button>
-            <h2
-              className={`${integral.className} mb-[10px] text-3xl font-bold`}
-            >
-              SHOP.CO
-            </h2>
+            <Link href="/">
+              <h2
+                className={`${integral.className} mb-[10px] text-3xl font-bold`}
+              >
+                SHOP.CO
+              </h2>
+            </Link>
           </div>
           <ul className="hidden gap-5 px-8 lg:flex">
             <li>
@@ -53,9 +56,9 @@ export function Header() {
             <button className="lg:hidden">
               <Search strokeWidth={2.5} />
             </button>
-            <button>
+            <Link href="/cart">
               <ShoppingCart strokeWidth={2.5} />
-            </button>
+            </Link>
             <button>
               <CircleUserRound strokeWidth={2.5} />
             </button>

@@ -1,4 +1,5 @@
 import { Star, StarHalf } from 'lucide-react'
+import Link from 'next/link'
 
 interface StarRatingProps {
   rating: number
@@ -24,12 +25,14 @@ function StarRating({ rating }: StarRatingProps) {
 
 export function ProductCard() {
   return (
-    <div className="w-[175px]">
+    <div className="w-[175px] lg:w-[295px]">
       <div className="rounded-2xl bg-isabelline">
-        <img
-          src="https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-white-t-shirt-mockup-realistic-t-shirt-png-image_9906363.png"
-          alt=""
-        />
+        <Link href="/detail/produto2">
+          <img
+            src="https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-white-t-shirt-mockup-realistic-t-shirt-png-image_9906363.png"
+            alt=""
+          />
+        </Link>
       </div>
       <div>
         <p className="truncate whitespace-nowrap text-lg font-bold">
