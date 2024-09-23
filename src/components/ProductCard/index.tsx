@@ -5,7 +5,7 @@ interface StarRatingProps {
   rating: number
 }
 
-function StarRating({ rating }: StarRatingProps) {
+export function StarRating({ rating }: StarRatingProps) {
   const stars = []
 
   // Loop para criar as estrelas
