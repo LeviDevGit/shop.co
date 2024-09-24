@@ -1,13 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { integral } from '@/app/layout'
-import { StarRating } from '@/components/ProductCard'
-import { Check, Minus, Plus } from 'lucide-react'
+import { ProductCard, StarRating } from '@/components/ProductCard'
+import {
+  Check,
+  ChevronDown,
+  CircleCheck,
+  Minus,
+  Plus,
+  SlidersVertical,
+  Star,
+} from 'lucide-react'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function Product({ params }: { params: { product: string } }) {
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-col items-center">
       <div className="mx-4 py-10 lg:m-0 lg:w-[1240px]">
         <div className="flex flex-col gap-3 lg:flex-row">
           <div className="flex gap-5 lg:order-4 lg:mr-7">
@@ -173,6 +181,238 @@ export default function Product({ params }: { params: { product: string } }) {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="mx-4 lg:mx-0 lg:w-[1240px]">
+        <fieldset className="flex w-full">
+          <div className="relative w-1/3">
+            <input
+              type="radio"
+              name="details"
+              className="peer h-full w-full cursor-pointer appearance-none border-b border-black/10 checked:border-black"
+            />
+            <label
+              htmlFor=""
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-lg text-black/60 peer-checked:font-medium peer-checked:text-black"
+            >
+              Product Details
+            </label>
+          </div>
+          <div className="relative w-1/3">
+            <input
+              type="radio"
+              name="details"
+              className="peer h-full w-full cursor-pointer appearance-none border-b border-black/10 checked:border-black"
+              checked
+            />
+            <label
+              htmlFor=""
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-lg text-black/60 peer-checked:font-medium peer-checked:text-black"
+            >
+              Rating & Reviews
+            </label>
+          </div>
+          <div className="relative h-[60px] w-1/3">
+            <input
+              type="radio"
+              name="details"
+              className="peer h-full w-full cursor-pointer appearance-none border-b border-black/10 checked:border-black"
+            />
+            <label
+              htmlFor=""
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-lg text-black/60 peer-checked:font-medium peer-checked:text-black"
+            >
+              FAQs
+            </label>
+          </div>
+        </fieldset>
+        <div>
+          <div className="mt-6 flex items-center justify-between font-medium">
+            <h3 className="flex items-center gap-2 text-2xl font-bold">
+              All Reviews
+              <span className="font-regular text-base text-black/60">
+                (451)
+              </span>
+            </h3>
+            <div className="flex h-[48px] gap-4">
+              <button className="rounded-[62px] bg-anti-flash-white p-3">
+                <SlidersVertical width={24} />
+              </button>
+              <button className="flex items-center gap-4 rounded-[62px] bg-anti-flash-white px-5">
+                Latest <ChevronDown />
+              </button>
+              <button className="rounded-[62px] bg-black px-6 text-white">
+                Write a Review
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="mx-4 my-5 rounded-[20px] border border-black/10 p-6 lg:w-[1240px]">
+              <div className="flex gap-1 pb-3">
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+              </div>
+              <div className="flex items-center gap-2 pb-1">
+                <p className="font-bold text-black">Sarah M.</p>
+                <CircleCheck color="#FFFF" fill="#01AB31" />
+              </div>
+              <p className="text-black/60">
+                &quot;
+                {`I'm blown away by the quality and style of the clothes I
+            received from Shop.co. From casual wear to elegant dresses, every
+            piece I've bought has exceeded my expectations.`}
+                &quot;
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="mx-4 my-5 rounded-[20px] border border-black/10 p-6 lg:w-[1240px]">
+              <div className="flex gap-1 pb-3">
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+              </div>
+              <div className="flex items-center gap-2 pb-1">
+                <p className="font-bold text-black">Sarah M.</p>
+                <CircleCheck color="#FFFF" fill="#01AB31" />
+              </div>
+              <p className="text-black/60">
+                &quot;
+                {`I'm blown away by the quality and style of the clothes I
+            received from Shop.co. From casual wear to elegant dresses, every
+            piece I've bought has exceeded my expectations.`}
+                &quot;
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="mx-4 my-5 rounded-[20px] border border-black/10 p-6 lg:w-[1240px]">
+              <div className="flex gap-1 pb-3">
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+                <Star
+                  fill="#FFC633"
+                  color="#FFC633"
+                  strokeWidth={1}
+                  size={18}
+                />
+              </div>
+              <div className="flex items-center gap-2 pb-1">
+                <p className="font-bold text-black">Sarah M.</p>
+                <CircleCheck color="#FFFF" fill="#01AB31" />
+              </div>
+              <p className="text-black/60">
+                &quot;
+                {`I'm blown away by the quality and style of the clothes I
+            received from Shop.co. From casual wear to elegant dresses, every
+            piece I've bought has exceeded my expectations.`}
+                &quot;
+              </p>
+            </div>
+          </div>
+          <div className="flex w-full justify-center">
+            <button className="flex w-full items-center justify-center rounded-[62px] border border-black/10 py-2 font-medium text-black lg:mt-10 lg:w-[218px] lg:py-3">
+              Load More Reviews
+            </button>
+          </div>
+        </div>
+        <div className="mb-14 flex flex-col lg:mb-24 lg:items-center">
+          <h1
+            className={`${integral.className} my-8 text-center text-4xl lg:my-16 lg:text-6xl`}
+          >
+            You might also like
+          </h1>
+          <ul className="mx-4 flex gap-5 overflow-hidden lg:w-[1240px]">
+            <li>
+              <ProductCard />
+            </li>
+            <li>
+              <ProductCard />
+            </li>
+            <li>
+              <ProductCard />
+            </li>
+            <li>
+              <ProductCard />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
