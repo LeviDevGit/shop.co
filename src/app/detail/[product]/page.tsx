@@ -15,15 +15,15 @@ import {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function Product({ params }: { params: { product: string } }) {
   return (
-    <div className="flex flex-col items-center">
-      <div className="mx-4 py-10 lg:m-0 lg:w-[1240px]">
+    <div className="flex flex-col items-center overflow-hidden">
+      <div className="w-full px-4 lg:m-0 lg:w-[1240px] lg:py-10">
         <div className="flex flex-col gap-3 lg:flex-row">
           <div className="flex gap-5 lg:order-4 lg:mr-7">
-            <div className="flex h-[290px] w-full items-center justify-center rounded-[20px] bg-isabelline lg:h-full lg:w-[444px]">
+            <div className="flex w-full items-center justify-center rounded-[20px] bg-isabelline lg:h-full lg:w-[444px]">
               <img
                 src="https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-white-t-shirt-mockup-realistic-t-shirt-png-image_9906363.png"
                 alt=""
-                className="w-11/12"
+                className="w-fit lg:w-11/12"
               />
             </div>
           </div>
@@ -47,8 +47,8 @@ export default function Product({ params }: { params: { product: string } }) {
               />
             </div>
           </div>
-          <div className="flex flex-col justify-between lg:order-5">
-            <h1 className={`${integral.className} text-4xl`}>
+          <div className="flex flex-col gap-2 lg:order-5 lg:justify-between">
+            <h1 className={`${integral.className} text-3xl lg:text-4xl`}>
               One Life Graphic Tshirt
             </h1>
             <div className="flex gap-2">
@@ -57,7 +57,7 @@ export default function Product({ params }: { params: { product: string } }) {
                 3.5/<span className="text-black/60">5</span>
               </h6>
             </div>
-            <div className="flex items-center gap-4 text-3xl font-bold">
+            <div className="flex items-center gap-4 text-xl font-bold lg:text-3xl">
               <h4>$145</h4>
               <h4 className="text-black/40 line-through">$242</h4>
               <div className="ml-1 flex h-[34px] w-[72px] items-center justify-center rounded-[62px] bg-red-500/10 px-5">
@@ -110,9 +110,9 @@ export default function Product({ params }: { params: { product: string } }) {
               </div>
             </fieldset>
             <hr className="my-4" />
-            <fieldset className="flex gap-4">
+            <fieldset className="flex w-full gap-4 break-keep">
               <legend className="mb-3 text-black/60">Choose Size</legend>
-              <div className="relative h-[46px] w-[8ch] rounded-[62px] bg-anti-flash-white text-black/60">
+              <div className="relative h-[39px] w-[8ch] rounded-[62px] bg-anti-flash-white text-black/60 lg:h-[46px]">
                 <input
                   type="radio"
                   name="size"
@@ -125,7 +125,7 @@ export default function Product({ params }: { params: { product: string } }) {
                   Small
                 </label>
               </div>
-              <div className="relative h-[46px] w-[9ch] rounded-[62px] bg-anti-flash-white text-black/60">
+              <div className="relative w-[9ch] rounded-[62px] bg-anti-flash-white text-black/60 lg:h-[46px]">
                 <input
                   type="radio"
                   name="size"
@@ -138,7 +138,7 @@ export default function Product({ params }: { params: { product: string } }) {
                   Medium
                 </label>
               </div>
-              <div className="relative h-[46px] w-[8ch] rounded-[62px] bg-anti-flash-white text-black/60">
+              <div className="relative w-[8ch] rounded-[62px] bg-anti-flash-white text-black/60 lg:h-[46px]">
                 <input
                   type="radio"
                   name="size"
@@ -151,7 +151,7 @@ export default function Product({ params }: { params: { product: string } }) {
                   Large
                 </label>
               </div>
-              <div className="relative h-[46px] w-[10ch] rounded-[62px] bg-anti-flash-white text-black/60">
+              <div className="relative w-[10ch] rounded-[62px] bg-anti-flash-white text-black/60 lg:h-[46px]">
                 <input
                   type="radio"
                   name="size"
@@ -167,7 +167,7 @@ export default function Product({ params }: { params: { product: string } }) {
             </fieldset>
             <hr className="my-4" />
             <div className="flex justify-between gap-5 font-medium">
-              <div className="flex h-[52px] w-[170px] items-center justify-center gap-8 rounded-[62px] bg-anti-flash-white text-black">
+              <div className="flex h-[52px] min-w-[110px] items-center justify-around rounded-[62px] bg-anti-flash-white text-black lg:w-[170px] lg:justify-center lg:gap-8">
                 <button>
                   <Minus strokeWidth={2} />
                 </button>
@@ -183,8 +183,8 @@ export default function Product({ params }: { params: { product: string } }) {
           </div>
         </div>
       </div>
-      <div className="mx-4 lg:mx-0 lg:w-[1240px]">
-        <fieldset className="flex w-full">
+      <div className="w-full break-keep lg:mx-0 lg:w-[1240px]">
+        <fieldset className="flex w-full px-4">
           <div className="relative w-1/3">
             <input
               type="radio"
@@ -193,7 +193,7 @@ export default function Product({ params }: { params: { product: string } }) {
             />
             <label
               htmlFor=""
-              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-lg text-black/60 peer-checked:font-medium peer-checked:text-black"
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-sm text-black/60 peer-checked:font-medium peer-checked:text-black lg:text-lg"
             >
               Product Details
             </label>
@@ -207,7 +207,7 @@ export default function Product({ params }: { params: { product: string } }) {
             />
             <label
               htmlFor=""
-              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-lg text-black/60 peer-checked:font-medium peer-checked:text-black"
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-sm text-black/60 peer-checked:font-medium peer-checked:text-black lg:text-lg"
             >
               Rating & Reviews
             </label>
@@ -220,34 +220,34 @@ export default function Product({ params }: { params: { product: string } }) {
             />
             <label
               htmlFor=""
-              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-lg text-black/60 peer-checked:font-medium peer-checked:text-black"
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-sm text-black/60 peer-checked:font-medium peer-checked:text-black lg:text-lg"
             >
               FAQs
             </label>
           </div>
         </fieldset>
-        <div>
-          <div className="mt-6 flex items-center justify-between font-medium">
-            <h3 className="flex items-center gap-2 text-2xl font-bold">
+        <div className="w-full px-4">
+          <div className="mt-6 flex w-full items-center justify-between font-medium">
+            <h3 className="flex items-center gap-2 text-xl font-bold lg:text-2xl">
               All Reviews
-              <span className="font-regular text-base text-black/60">
+              <span className="font-regular text-sm text-black/60 lg:text-base">
                 (451)
               </span>
             </h3>
-            <div className="flex h-[48px] gap-4">
-              <button className="rounded-[62px] bg-anti-flash-white p-3">
+            <div className="flex h-[40px] gap-2 lg:h-[48px] lg:gap-4">
+              <button className="flex items-center justify-center rounded-[62px] bg-anti-flash-white p-3">
                 <SlidersVertical width={24} />
               </button>
-              <button className="flex items-center gap-4 rounded-[62px] bg-anti-flash-white px-5">
+              <button className="hidden items-center gap-4 rounded-[62px] bg-anti-flash-white px-5 lg:flex">
                 Latest <ChevronDown />
               </button>
-              <button className="rounded-[62px] bg-black px-6 text-white">
+              <button className="rounded-[62px] bg-black px-6 text-sm text-white lg:text-base">
                 Write a Review
               </button>
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="mx-4 my-5 rounded-[20px] border border-black/10 p-6 lg:w-[1240px]">
+            <div className="my-5 rounded-[20px] border border-black/10 p-6 lg:mx-4 lg:w-[1240px]">
               <div className="flex gap-1 pb-3">
                 <Star
                   fill="#FFC633"
@@ -294,7 +294,7 @@ export default function Product({ params }: { params: { product: string } }) {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="mx-4 my-5 rounded-[20px] border border-black/10 p-6 lg:w-[1240px]">
+            <div className="my-5 rounded-[20px] border border-black/10 p-6 lg:mx-4 lg:w-[1240px]">
               <div className="flex gap-1 pb-3">
                 <Star
                   fill="#FFC633"
@@ -341,7 +341,7 @@ export default function Product({ params }: { params: { product: string } }) {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="mx-4 my-5 rounded-[20px] border border-black/10 p-6 lg:w-[1240px]">
+            <div className="my-5 rounded-[20px] border border-black/10 p-6 lg:mx-4 lg:w-[1240px]">
               <div className="flex gap-1 pb-3">
                 <Star
                   fill="#FFC633"

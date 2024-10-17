@@ -1,7 +1,6 @@
 import { integral } from '@/app/layout'
-import { CircleUserRound, Menu, Search, ShoppingCart, X } from 'lucide-react'
+import { Menu, Search, ShoppingCart, X } from 'lucide-react'
 import Link from 'next/link'
-import { Dropdown } from './Dropdown'
 
 export function Header() {
   return (
@@ -34,10 +33,9 @@ export function Header() {
             </Link>
           </div>
           <div className="hidden gap-5 px-8 lg:flex">
-            <Dropdown />
             <Link href="/category/filtro1">On Sale</Link>
             <Link href="/category/filtro1">New Arrivals</Link>
-            <button>Brands</button>
+            <Link href="/category/filtro1">Popular</Link>
           </div>
           <div className="hidden grow lg:block">
             <div className="flex h-[48px] items-center gap-3 rounded-[62px] bg-anti-flash-white px-4 text-black/40">
@@ -56,9 +54,6 @@ export function Header() {
             <Link href="/cart">
               <ShoppingCart strokeWidth={2.5} />
             </Link>
-            <button>
-              <CircleUserRound strokeWidth={2.5} />
-            </button>
           </div>
         </div>
       </nav>
